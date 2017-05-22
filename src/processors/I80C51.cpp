@@ -1,0 +1,29 @@
+//
+// C++ Implementation: I80C51
+//
+// Description:
+//
+//
+// Author: Heikki Pulkkinen <heikki@CompaQ7113EA>, (C) 2005
+//
+// Copyright: See COPYING file that comes with this distribution
+//
+//
+#include "I80C51.h"
+
+//Muodostin
+I80C51::I80C51() : I8051(), I80C31()
+{
+	processorName_="80C51";
+}
+
+//Hajotin
+I80C51::~I80C51()
+{
+}
+
+void I80C51::reset_VirtualPart()
+{
+	I8051::reset_VirtualPart();      //Kutsutaan kantaluokan resettiä
+	I80C31::reset_VirtualPart();
+}

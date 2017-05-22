@@ -1,0 +1,87 @@
+//
+// C++ Interface: I8032
+//
+// Description:
+//
+//
+// Author: Heikki Pulkkinen <heikki@CompaQ7113EA>, (C) 2005
+//
+// Copyright: See COPYING file that comes with this distribution
+//
+//
+// Johdettu luokasta i8031
+#ifndef I8032_H
+#define I8032_H
+
+
+#include "I8031.h"
+#include "I8032_NameS.h"
+#include "InternalRAM.h"
+#include "TimersCounters2.h"
+
+class I8032: virtual public I8031
+{
+	public:
+
+		I8032();
+		~I8032();
+
+		//Haussa ja kirjoituksessa käytettävä oikeita osoitevälejä 0x80 - 0xFF
+		unsigned char readInternalIndirectDataMemory(unsigned int const  address);
+		void writeInternalIndirectDataMemory(unsigned int const  address, unsigned char const  value);
+		bool isInternalIndirectDataMemoryChanged(unsigned int const  address);
+		bool isInternalIndirectDataMemoryChangedAfterClear(unsigned int const  address);
+
+		unsigned int readTimerValue16(char const  timerNumber);//(UM)
+
+		void saveDataToFileStream(QDataStream& saveFileStream);
+		void readDataFromFileStream(QDataStream& readFileStream);
+
+	protected:
+		void reset_VirtualPart(void);
+		void powerOnReset_VirtualPart(void);      //Tehdään syväresetti, clearaa kaikki alueet
+
+		//Keskeytysten käsittely päällä
+		//Timer2
+		bool tf2P0_InterruptServiceIsOn_;
+		bool tf2P1_InterruptServiceIsOn_;
+
+		InternalRAM internalIndirectDataMemory_[I8032_NameS::INTERNAL_INDIRECT_RAM_SIZE];
+
+		//Uudellen määritetyt keskeytyskäsittelijät
+		unsigned int priority0IntCheck(void);
+		unsigned int priority1IntCheck(void);
+		unsigned int putInterruptServiceOn(unsigned int const interruptToPutOn);
+		//Sekä keskytyksistä paluut
+		bool priority0IntReturn(void);
+		bool priority1IntReturn(void);
+
+		void pop_pc(void); //Uudellenmääritelty koska lisä indirect rammi
+		void push_pc(void);//jota voidaan käyttää
+
+		//Uudelleenmääritetyt epäsuorat sisäisen muistin haut
+		unsigned int readDataFromInternalDataMemoryIndirectlyUsingRBRegister(unsigned int r);
+		void writeDataToInternalDataMemoryIndirectlyUsingRBRegister(unsigned int r, unsigned int val);
+
+		//Uudellen määritys: lisätty Timer2
+		//void timersAndCountersHandling(void);
+
+		//Uudellenmääritys: Serial timer2 käyttö baud rate geniksenä
+		void serialPortRxTxHandling(void);
+
+		//8051 käskyjen käsittely
+		//pus ja pop voivat osoittaa myös alueella 0x80 - 0xFF
+		void push(unsigned char dpush);
+		void pop(unsigned char dpop);
+
+	private:
+		void formatInternalIndirectDataMemory(void);
+		void createSFRBitNameTable(void);
+		void createSFRNameTable(void);
+
+		void clearInternalIndirectDataMemory(void);
+
+};
+
+
+#endif

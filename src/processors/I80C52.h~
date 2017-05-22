@@ -1,0 +1,29 @@
+//
+// C++ Interface: I80C52
+//
+// Description:
+//
+//
+// Author: Heikki Pulkkinen <heikki@CompaQ7113EA>, (C) 2005
+//
+// Copyright: See COPYING file that comes with this distribution
+//
+//Cmos versio 8052 prosessorista
+//Perii luokat i80C32 ja i8052
+
+#ifndef I80C52_H
+#define I80C52_H
+
+#include "I80C32.h"
+#include "I8052.h"
+#include "I80C52_NameS.h"
+
+class I80C52: public I80C32, public I8052
+{
+	public:
+		I80C52(void);
+		virtual ~I80C52(void);
+		void reset(void);
+};
+
+#endif

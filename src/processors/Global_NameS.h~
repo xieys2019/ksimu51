@@ -1,0 +1,55 @@
+/***************************************************************************
+*   Copyright (C) 2008 by Heikki Pulkkinen   *
+*   heikki@localhost   *
+*                                                                         *
+*   This program is free software; you can redistribute it and/or modify  *
+*   it under the terms of the GNU General Public License as published by  *
+*   the Free Software Foundation; either version 2 of the License, or     *
+*   (at your option) any later version.                                   *
+*                                                                         *
+*   This program is distributed in the hope that it will be useful,       *
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+*   GNU General Public License for more details.                          *
+*                                                                         *
+*   You should have received a copy of the GNU General Public License     *
+*   along with this program; if not, write to the                         *
+*   Free Software Foundation, Inc.,                                       *
+*   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+***************************************************************************/
+#ifndef GLOBAL_NAMES_H
+#define GLOBAL_NAMES_H
+
+namespace Global_NameS
+{
+	using namespace std;
+	
+	unsigned char const BIT0=0x01;
+	unsigned char const BIT1=0x02;
+	unsigned char const BIT2=0x04;
+	unsigned char const BIT3=0x08;
+	unsigned char const BIT4=0x10;
+	unsigned char const BIT5=0x20;
+	unsigned char const BIT6=0x40;
+	unsigned char const BIT7=0x80;
+	unsigned int const BIT8=0x100;
+	unsigned int const BIT9=0x200;
+	unsigned int const BIT10=0x400;
+	unsigned int const BIT11=0x800;
+	unsigned int const BIT12=0x1000;
+	unsigned int const BIT13=0x2000;
+	unsigned int const BIT14=0x4000;
+	unsigned int const BIT15=0x8000;
+
+	unsigned char const BIT_NUMBER_0=0;
+	unsigned char const BIT_NUMBER_1=1;
+	unsigned char const BIT_NUMBER_2=2;
+	unsigned char const BIT_NUMBER_3=3;
+	unsigned char const BIT_NUMBER_4=4;
+	unsigned char const BIT_NUMBER_5=5;
+	unsigned char const BIT_NUMBER_6=6;
+	unsigned char const BIT_NUMBER_7=7;
+};
+
+
+#endif

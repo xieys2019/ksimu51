@@ -1,0 +1,267 @@
+/****************************************************************************
+** KSimu51 meta object code from reading C++ file 'ksimu51.h'
+**
+** Created: Sun Jul 8 11:35:02 2012
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "ksimu51.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *KSimu51::className() const
+{
+    return "KSimu51";
+}
+
+QMetaObject *KSimu51::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_KSimu51( "KSimu51", &KSimu51::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString KSimu51::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "KSimu51", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString KSimu51::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "KSimu51", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* KSimu51::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = WorkspaceMainW::staticMetaObject();
+    static const QUParameter param_slot_0[] = {
+	{ 0, &static_QUType_ptr, "I51BaseW", QUParameter::In }
+    };
+    static const QUMethod slot_0 = {"processorCreatedFromLibrary", 1, param_slot_0 };
+    static const QUMethod slot_1 = {"openWork", 0, 0 };
+    static const QUMethod slot_2 = {"saveWork", 0, 0 };
+    static const QUMethod slot_3 = {"saveWorkAs", 0, 0 };
+    static const QUMethod slot_4 = {"loadEverythinToActiveProcessor", 0, 0 };
+    static const QUMethod slot_5 = {"loadEverythinToAllProcessors", 0, 0 };
+    static const QUMethod slot_6 = {"copyActiveProcessor", 0, 0 };
+    static const QUMethod slot_7 = {"activeProcessorProperties", 0, 0 };
+    static const QUMethod slot_8 = {"powerOnReset", 0, 0 };
+    static const QUMethod slot_9 = {"powerOnResetAll", 0, 0 };
+    static const QUMethod slot_10 = {"run", 0, 0 };
+    static const QUMethod slot_11 = {"runAll", 0, 0 };
+    static const QUMethod slot_12 = {"stop", 0, 0 };
+    static const QUMethod slot_13 = {"stopAll", 0, 0 };
+    static const QUMethod slot_14 = {"step", 0, 0 };
+    static const QUMethod slot_15 = {"stepAll", 0, 0 };
+    static const QUMethod slot_16 = {"showPC", 0, 0 };
+    static const QUMethod slot_17 = {"showSP", 0, 0 };
+    static const QUMethod slot_18 = {"showR0", 0, 0 };
+    static const QUMethod slot_19 = {"showR1", 0, 0 };
+    static const QUMethod slot_20 = {"showDPTR", 0, 0 };
+    static const QUMethod slot_21 = {"updateWindow", 0, 0 };
+    static const QUMethod slot_22 = {"updateWindows", 0, 0 };
+    static const QUMethod slot_23 = {"centerActiveWindowInActiveWorkspaceLevel", 0, 0 };
+    static const QUMethod slot_24 = {"cornerActiveWindowInActiveWorkspaceLevel", 0, 0 };
+    static const QUMethod slot_25 = {"nextActiveWindowInActiveWorkspaceLevel", 0, 0 };
+    static const QUMethod slot_26 = {"backPreviousWindowStateInActiveWorkspaceLevel", 0, 0 };
+    static const QUMethod slot_27 = {"moveNearActiveWindowToWindowInActiveWorkspaceLevel", 0, 0 };
+    static const QUMethod slot_28 = {"resizeWindowHiddenOffInActiveWorkspaceLevel", 0, 0 };
+    static const QUMethod slot_29 = {"setActiveWindowColorInActiveWorkspaceLevel", 0, 0 };
+    static const QUMethod slot_30 = {"runTimerTimeout", 0, 0 };
+    static const QUMethod slot_31 = {"editSerialNet", 0, 0 };
+    static const QUMethod slot_32 = {"serialNetEditLineReturnPressed", 0, 0 };
+    static const QUParameter param_slot_33[] = {
+	{ "t", &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod slot_33 = {"serialNetEditLineTextChanged", 1, param_slot_33 };
+    static const QUParameter param_slot_34[] = {
+	{ "item", &static_QUType_ptr, "QListBoxItem", QUParameter::In },
+	{ "p", &static_QUType_varptr, "\x0e", QUParameter::In }
+    };
+    static const QUMethod slot_34 = {"serialNetEditListBoxRightButtonClicked", 2, param_slot_34 };
+    static const QUMethod slot_35 = {"serialEditListBoxInsertLineActivated", 0, 0 };
+    static const QUMethod slot_36 = {"serialEditListBoxRemoveLineActivated", 0, 0 };
+    static const QUMethod slot_37 = {"serialEditListBoxRemoveAllLinesActivated", 0, 0 };
+    static const QUMethod slot_38 = {"serialEditListBoxClearSelectionActivated", 0, 0 };
+    static const QUMethod slot_39 = {"charToSerialNet", 0, 0 };
+    static const QUMethod slot_40 = {"clearSerialNetListBox", 0, 0 };
+    static const QUMethod slot_41 = {"closeWindow", 0, 0 };
+    static const QUMethod slot_42 = {"closeAllWindows", 0, 0 };
+    static const QUParameter param_slot_43[] = {
+	{ "processorIndex", &static_QUType_int, 0, QUParameter::In },
+	{ "text", &static_QUType_QString, 0, QUParameter::In },
+	{ "time", &static_QUType_ptr, "unsigned int", QUParameter::In }
+    };
+    static const QUMethod slot_43 = {"messageFromProcessorW_SetStatusBar", 3, param_slot_43 };
+    static const QUParameter param_slot_44[] = {
+	{ "processorIndex", &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_44 = {"messageFromProcessorW_Close", 1, param_slot_44 };
+    static const QUParameter param_slot_45[] = {
+	{ "processorIndex", &static_QUType_int, 0, QUParameter::In },
+	{ "level", &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_45 = {"messageFromProcessorW_SetWindowLevel", 2, param_slot_45 };
+    static const QUMethod slot_46 = {"prosessorActivated", 0, 0 };
+    static const QUParameter param_slot_47[] = {
+	{ "p", &static_QUType_varptr, "\x0e", QUParameter::In }
+    };
+    static const QUMethod slot_47 = {"x11Signal_LeftMouseButtonPressed", 1, param_slot_47 };
+    static const QMetaData slot_tbl[] = {
+	{ "processorCreatedFromLibrary(I51BaseW*)", &slot_0, QMetaData::Private },
+	{ "openWork()", &slot_1, QMetaData::Private },
+	{ "saveWork()", &slot_2, QMetaData::Private },
+	{ "saveWorkAs()", &slot_3, QMetaData::Private },
+	{ "loadEverythinToActiveProcessor()", &slot_4, QMetaData::Private },
+	{ "loadEverythinToAllProcessors()", &slot_5, QMetaData::Private },
+	{ "copyActiveProcessor()", &slot_6, QMetaData::Private },
+	{ "activeProcessorProperties()", &slot_7, QMetaData::Private },
+	{ "powerOnReset()", &slot_8, QMetaData::Private },
+	{ "powerOnResetAll()", &slot_9, QMetaData::Private },
+	{ "run()", &slot_10, QMetaData::Private },
+	{ "runAll()", &slot_11, QMetaData::Private },
+	{ "stop()", &slot_12, QMetaData::Private },
+	{ "stopAll()", &slot_13, QMetaData::Private },
+	{ "step()", &slot_14, QMetaData::Private },
+	{ "stepAll()", &slot_15, QMetaData::Private },
+	{ "showPC()", &slot_16, QMetaData::Private },
+	{ "showSP()", &slot_17, QMetaData::Private },
+	{ "showR0()", &slot_18, QMetaData::Private },
+	{ "showR1()", &slot_19, QMetaData::Private },
+	{ "showDPTR()", &slot_20, QMetaData::Private },
+	{ "updateWindow()", &slot_21, QMetaData::Private },
+	{ "updateWindows()", &slot_22, QMetaData::Private },
+	{ "centerActiveWindowInActiveWorkspaceLevel()", &slot_23, QMetaData::Private },
+	{ "cornerActiveWindowInActiveWorkspaceLevel()", &slot_24, QMetaData::Private },
+	{ "nextActiveWindowInActiveWorkspaceLevel()", &slot_25, QMetaData::Private },
+	{ "backPreviousWindowStateInActiveWorkspaceLevel()", &slot_26, QMetaData::Private },
+	{ "moveNearActiveWindowToWindowInActiveWorkspaceLevel()", &slot_27, QMetaData::Private },
+	{ "resizeWindowHiddenOffInActiveWorkspaceLevel()", &slot_28, QMetaData::Private },
+	{ "setActiveWindowColorInActiveWorkspaceLevel()", &slot_29, QMetaData::Private },
+	{ "runTimerTimeout()", &slot_30, QMetaData::Private },
+	{ "editSerialNet()", &slot_31, QMetaData::Private },
+	{ "serialNetEditLineReturnPressed()", &slot_32, QMetaData::Private },
+	{ "serialNetEditLineTextChanged(const QString&)", &slot_33, QMetaData::Private },
+	{ "serialNetEditListBoxRightButtonClicked(QListBoxItem*,const QPoint&)", &slot_34, QMetaData::Private },
+	{ "serialEditListBoxInsertLineActivated()", &slot_35, QMetaData::Private },
+	{ "serialEditListBoxRemoveLineActivated()", &slot_36, QMetaData::Private },
+	{ "serialEditListBoxRemoveAllLinesActivated()", &slot_37, QMetaData::Private },
+	{ "serialEditListBoxClearSelectionActivated()", &slot_38, QMetaData::Private },
+	{ "charToSerialNet()", &slot_39, QMetaData::Private },
+	{ "clearSerialNetListBox()", &slot_40, QMetaData::Private },
+	{ "closeWindow()", &slot_41, QMetaData::Private },
+	{ "closeAllWindows()", &slot_42, QMetaData::Private },
+	{ "messageFromProcessorW_SetStatusBar(const int,const QString&,const unsigned int)", &slot_43, QMetaData::Private },
+	{ "messageFromProcessorW_Close(const int)", &slot_44, QMetaData::Private },
+	{ "messageFromProcessorW_SetWindowLevel(const int,const int)", &slot_45, QMetaData::Private },
+	{ "prosessorActivated()", &slot_46, QMetaData::Private },
+	{ "x11Signal_LeftMouseButtonPressed(QPoint*)", &slot_47, QMetaData::Private }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"KSimu51", parentObject,
+	slot_tbl, 48,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_KSimu51.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* KSimu51::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "KSimu51" ) )
+	return this;
+    return WorkspaceMainW::qt_cast( clname );
+}
+
+bool KSimu51::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: processorCreatedFromLibrary((I51BaseW*)static_QUType_ptr.get(_o+1)); break;
+    case 1: openWork(); break;
+    case 2: saveWork(); break;
+    case 3: saveWorkAs(); break;
+    case 4: loadEverythinToActiveProcessor(); break;
+    case 5: loadEverythinToAllProcessors(); break;
+    case 6: copyActiveProcessor(); break;
+    case 7: activeProcessorProperties(); break;
+    case 8: powerOnReset(); break;
+    case 9: powerOnResetAll(); break;
+    case 10: run(); break;
+    case 11: runAll(); break;
+    case 12: stop(); break;
+    case 13: stopAll(); break;
+    case 14: step(); break;
+    case 15: stepAll(); break;
+    case 16: showPC(); break;
+    case 17: showSP(); break;
+    case 18: showR0(); break;
+    case 19: showR1(); break;
+    case 20: showDPTR(); break;
+    case 21: updateWindow(); break;
+    case 22: updateWindows(); break;
+    case 23: centerActiveWindowInActiveWorkspaceLevel(); break;
+    case 24: cornerActiveWindowInActiveWorkspaceLevel(); break;
+    case 25: nextActiveWindowInActiveWorkspaceLevel(); break;
+    case 26: backPreviousWindowStateInActiveWorkspaceLevel(); break;
+    case 27: moveNearActiveWindowToWindowInActiveWorkspaceLevel(); break;
+    case 28: resizeWindowHiddenOffInActiveWorkspaceLevel(); break;
+    case 29: setActiveWindowColorInActiveWorkspaceLevel(); break;
+    case 30: runTimerTimeout(); break;
+    case 31: editSerialNet(); break;
+    case 32: serialNetEditLineReturnPressed(); break;
+    case 33: serialNetEditLineTextChanged((const QString&)static_QUType_QString.get(_o+1)); break;
+    case 34: serialNetEditListBoxRightButtonClicked((QListBoxItem*)static_QUType_ptr.get(_o+1),(const QPoint&)*((const QPoint*)static_QUType_ptr.get(_o+2))); break;
+    case 35: serialEditListBoxInsertLineActivated(); break;
+    case 36: serialEditListBoxRemoveLineActivated(); break;
+    case 37: serialEditListBoxRemoveAllLinesActivated(); break;
+    case 38: serialEditListBoxClearSelectionActivated(); break;
+    case 39: charToSerialNet(); break;
+    case 40: clearSerialNetListBox(); break;
+    case 41: closeWindow(); break;
+    case 42: closeAllWindows(); break;
+    case 43: messageFromProcessorW_SetStatusBar((const int)static_QUType_int.get(_o+1),(const QString&)static_QUType_QString.get(_o+2),(const unsigned int)(*((const unsigned int*)static_QUType_ptr.get(_o+3)))); break;
+    case 44: messageFromProcessorW_Close((const int)static_QUType_int.get(_o+1)); break;
+    case 45: messageFromProcessorW_SetWindowLevel((const int)static_QUType_int.get(_o+1),(const int)static_QUType_int.get(_o+2)); break;
+    case 46: prosessorActivated(); break;
+    case 47: x11Signal_LeftMouseButtonPressed((QPoint*)static_QUType_varptr.get(_o+1)); break;
+    default:
+	return WorkspaceMainW::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool KSimu51::qt_emit( int _id, QUObject* _o )
+{
+    return WorkspaceMainW::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool KSimu51::qt_property( int id, int f, QVariant* v)
+{
+    return WorkspaceMainW::qt_property( id, f, v);
+}
+
+bool KSimu51::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

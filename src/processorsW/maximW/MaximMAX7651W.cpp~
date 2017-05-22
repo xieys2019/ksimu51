@@ -1,0 +1,66 @@
+/***************************************************************************
+*   Copyright (C) 2008 by Heikki Pulkkinen   *
+*   heikki@localhost   *
+*                                                                         *
+*   This program is free software; you can redistribute it and/or modify  *
+*   it under the terms of the GNU General Public License as published by  *
+*   the Free Software Foundation; either version 2 of the License, or     *
+*   (at your option) any later version.                                   *
+*                                                                         *
+*   This program is distributed in the hope that it will be useful,       *
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+*   GNU General Public License for more details.                          *
+*                                                                         *
+*   You should have received a copy of the GNU General Public License     *
+*   along with this program; if not, write to the                         *
+*   Free Software Foundation, Inc.,                                       *
+*   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+***************************************************************************/
+#include "MaximMAX7651W.h"
+
+
+MaximMAX7651W::MaximMAX7651W(QWidget* parent, char const * name, int wflags, int const  index, int const  type) : I51BaseW(parent, name, wflags, index, type), I51BaseInternalIRAMW(parent, name, wflags, index, type), I51BaseADConverterW(parent, name, wflags, index, type), I51BaseInternalFLASHW(parent, name, wflags, index, type), I51BaseTimer2W(parent, name, wflags, index, type)
+{
+
+	delete processor_; //Deletoidaan kantaluokassa luotu prosessori
+	processor_=new MAX7651; //Luodaan tämän oma prosessori
+}
+
+MaximMAX7651W::~MaximMAX7651W()
+{
+}
+
+void MaximMAX7651W::updateProcessorWindows_VirtualPart(void)
+{
+	I51BaseInternalFLASHW::updateProcessorWindows_VirtualPart();
+	I51BaseInternalIRAMW::updateProcessorWindows_VirtualPart();
+	I51BaseTimer2W::updateProcessorWindows_VirtualPart();
+}
+
+void MaximMAX7651W::createStaticWindows_VirtualPart(void)
+{
+	I51BaseInternalFLASHW::createStaticWindows_VirtualPart();
+	I51BaseInternalIRAMW::createStaticWindows_VirtualPart();
+	I51BaseTimer2W::createStaticWindows_VirtualPart();
+}
+
+void MaximMAX7651W::messageFromWorkspaceW_MemoryValueChanged_VirtualPart(const QString& childName, const QString& messageString, int const  messageIntegerValue, double const  messageDoubleValue)
+{
+	I51BaseADConverterW::messageFromWorkspaceW_MemoryValueChanged_VirtualPart(childName, messageString, messageIntegerValue, messageDoubleValue);
+	I51BaseInternalIRAMW::messageFromWorkspaceW_MemoryValueChanged_VirtualPart(childName, messageString, messageIntegerValue, messageDoubleValue);
+}
+
+void MaximMAX7651W::saveDataToFileStream_VirtualPart(QDataStream& saveFileStream)
+{
+	I51BaseADConverterW::saveDataToFileStream_VirtualPart(saveFileStream);
+	I51BaseInternalFLASHW::saveDataToFileStream_VirtualPart(saveFileStream);
+	I51BaseInternalIRAMW::saveDataToFileStream_VirtualPart(saveFileStream);
+}
+
+void MaximMAX7651W::readDataFromFileStream_VirtualPart(QDataStream& readFileStream)
+{
+	I51BaseADConverterW::readDataFromFileStream_VirtualPart(readFileStream);
+	I51BaseInternalFLASHW::readDataFromFileStream_VirtualPart(readFileStream);
+	I51BaseInternalIRAMW::readDataFromFileStream_VirtualPart(readFileStream);
+}
